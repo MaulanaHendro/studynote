@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+<div id="pomodoro-app">
+  <div id="container">
+    <div id="timer">
+      <div id="time">
+        <span id="minutes">25</span>
+        <span id="colon">:</span>
+        <span id="seconds">00</span>
+      </div>
+      <div id="filler"></div>
+    </div>
+
+    <div id="buttons">
+      <!-- <button id="work">Work</button>
+      <button id="shortBreak">Short Break</button>
+      <button id="longBreak">Long Break</button>
+      <button id="stop">Stop</button> -->
+      <button type="button" class="btn btn-primary" name="button" id="work">Work</button>
+      <button type="button" class="btn btn-success" name="button" id="shortBreak">Short Break</button>
+      <button type="button" class="btn btn-success" name="button" id="longBreak">Long Break</button>
+      <button type="button" class="btn btn-danger" name="button" id="stop">Stop</button>
+
+
+    </div>
+  </div>
+</div>
+<%- include("partials/footer"); -%>

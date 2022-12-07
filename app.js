@@ -84,6 +84,23 @@ const requestedPostId = req.params.postId;
 
 });
 
+app.get("/delete", function(req, res){
+  res.render("delete");
+});
+
+app.post("/delete", function(req, res){
+  const deleteId = req.body.deletePost;
+
+  Post.findByIdAndRemove(deleteId, function(err){
+    if(!err){
+      console.log("delete item");
+      res.redirect("/");
+    } else{
+      console.log("error");
+    }
+  })
+})
+
 app.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
 });
@@ -92,8 +109,12 @@ app.get("/contact", function(req, res){
   res.render("contact", {contactContent: contactContent});
 });
 
-app.get("/login", function(req, res){
-  res.render("login");
+app.get("/pomodoro", function(req, res){
+  res.render("pomodoro");
+});
+
+app.get("/examprep", function(req, res){
+  res.render("examprep")
 })
 
 

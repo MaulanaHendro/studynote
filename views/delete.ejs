@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<h2>Delete a Post</h2>
+<p>To delete a post, type in the ID of the post found in the post's URL in the form. Then, click the delete button.</p>
+
+<form class="" action="/delete" method="post">
+  <div class="form-group">
+    <input class="form-control" type="text" name="deletePost">
+  </div>
+  <button class="btn btn-danger" type="submit" name="button">Delete</button>
+</form>
+
+<%- include("partials/footer"); -%>
