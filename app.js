@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const ejs = require("ejs");
 const { hash, compare } = require("bcrypt");
 const session = require("express-session");
 const cookie = require("cookie-parser");
@@ -142,6 +143,7 @@ app.get("/posts/:postId", function (req, res) {
       question: post.question,
       content: post.content,
       summary: post.summary,
+      user: req.session.user
     });
   });
 });
